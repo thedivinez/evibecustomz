@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600;700&amp;family=Montserrat:wght@400;600;700&amp;display=swap");
+@import url("../fonts/font/bootstrap-icons.css");
+@import url("bootstrap.min.css");
+@import url("animation.css");
+@import url("animate.css");
+@import url("swiper-bundle.min.css");
+@import url("odometer-theme-default.css");
+
+@import url("global.css");
+@import url("header.css");
+@import url("footer.css");
+@import url("preloader.css");
+@import url("components.css");
+@import url("contact.css");
+@import url("style.css");
+@import url("responsive.css");
+@import url("light.css");

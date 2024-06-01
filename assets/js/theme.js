@@ -303,33 +303,6 @@
       },
     });
 
-    // Blog
-    var SwiperBlog = new Swiper(".swiper-blog", {
-      loop: true,
-      // autoplay: {
-      //     delay: 4000,
-      // },
-      speed: 1500,
-      slidesPerView: 1,
-      spaceBetween: 30,
-      // navigation: {
-      //     nextEl: '.swiper-button-next',
-      //     prevEl: '.swiper-button-prev',
-      // },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        768: {
-          slidesPerView: 2,
-        },
-        992: {
-          slidesPerView: 2,
-        },
-      },
-    });
-
     // Landing Innerpages
     var SwiperInnerpages = new Swiper(".swiper-innerpages", {
       loop: true,
@@ -464,39 +437,6 @@
     }
     $window.on("scroll", check_if_in_view);
 
-    // Fancybox
-    $('[data-fancybox="video"]').fancybox({
-      arrows: true,
-      animationEffect: [
-        //"false",            - disable
-        //"fade",
-        //"slide",
-        //"circular",
-        //"tube",
-        //"zoom-in-out",
-        "rotate",
-      ],
-      transitionEffect: [
-        //"false",            - disable
-        //"fade",
-        //"slide",
-        "circular",
-        //"tube",
-        //"zoom-in-out",
-        //"rotate"
-      ],
-      buttons: [
-        "zoom",
-        //"share",
-        //"slideShow",
-        "fullScreen",
-        //"download",
-        //"thumbs",
-        "close",
-      ],
-      infobar: false,
-    });
-
     // Youtube
     var $ytvideoTrigger = $(".ytplay-btn");
     $ytvideoTrigger.on("click", function (evt) {
@@ -545,53 +485,6 @@
     setInterval(function () {
       makeTimer();
     }, 1000);
-
-    // Shop
-    // Product Zoom
-    $(".product_zoom_button_group > li > a").eq(0).addClass("selected");
-    $(".product_zoom_container > .product_zoom_info")
-      .eq(0)
-      .css("display", "block");
-    $(".product_zoom_button_group").on("click", function (e) {
-      if ($(e.target).is("a")) {
-        /*Handle Tab Nav*/
-        $(".product_zoom_button_group > li > a").removeClass("selected");
-        $(e.target).addClass("selected");
-
-        /*Handles Tab Content*/
-        var clicked_index = $("a", this).index(e.target);
-        $(".product_zoom_container > .product_zoom_info").css(
-          "display",
-          "none"
-        );
-        $(".product_zoom_container > .product_zoom_info")
-          .eq(clicked_index)
-          .fadeIn();
-      }
-      $(this).blur();
-      return false;
-    });
-
-    // Header Cart open
-    $("a.wptb-cart-icon").on("click", function (e) {
-      e.preventDefault();
-      $(".wptb-cart-box").toggleClass("active");
-    });
-
-    // Datepickr / Flatpicker
-    $(".flatpickr").flatpickr({
-      mode: "range",
-      dateFormat: "d-M",
-      minDate: "today",
-    });
-    $(".flatpickr-time").flatpickr({
-      enableTime: true,
-      noCalendar: true,
-      dateFormat: "h:i K",
-    });
-
-    // Nice Select
-    $("select").niceSelect();
 
     // Totop Button
     $(".totop a").on("click", function (e) {

@@ -734,19 +734,6 @@
     line-height: 1.2em;
   }
 }
-.flatpickr-time input.flatpickr-hour,
-.flatpickr-time input.flatpickr-minute,
-.flatpickr-time input.flatpickr-second {
-  font-family: var(--font-family-base);
-  font-weight: 400;
-  border-radius: 0;
-  padding: 5px 10px;
-  height: 100%;
-  border-width: 0;
-}
-#world-map {
-  height: 600px;
-}
 .wptb-item--vector-map {
   position: relative;
   text-align: center;
